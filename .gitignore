@@ -1,0 +1,11 @@
+logs
+logs*
+logs/
+logs/*
+*/env/*
+.DS_Store
+*.json
+*__pycache__*
+*/__pycache__/*
+local.db
+.bash_history

@@ -1,0 +1,31 @@
+import os
+
+if 'ENV' in os.environ:
+	ENVIRONMENT = os.environ['ENV']
+else:
+	ENVIRONMENT = 'local'
+
+DRY_RUN_MOVE_FILES_ALONG_PIPELINE = False
+
+# Data lake related stuff
+DATALAKE_CONNECTION_STRING = os.environ['DATALAKE_CONNECTION_STRING']
+DATALAKE_LOGS_ACCOUNT_CONTAINER = os.environ['LOGS']
+DATALAKE_STORAGE_ACCOUNT_NAME = os.environ['DATALAKE_STORAGE_ACCOUNT_NAME']
+
+# Data warehouse related stuff
+DATABASE_URL = os.environ['DATABASE_URL']
+
+# Azure related stuff
+AZURE_TRANSLATION_KEY = os.environ['AZURE_TRANSLATION_KEY']
+AZURE_TRANSLATION_ENDPOINT = os.environ['AZURE_TRANSLATION_ENDPOINT']
+AZURE_TRANSLATION_LOCATION = os.environ['AZURE_TRANSLATION_LOCATION']
+
+# Youscan related stuff
+YOUSCAN_URL = 'https://api.youscan.io/api/external/'
+YOUSCAN_API_KEY = os.environ['YOUSCAN_API_KEY']
+DATALAKE_YOUSCAN_ACCOUNT_CONTAINER = os.environ['DATALAKE_YOUSCAN_ACCOUNT_CONTAINER']
+
+# OpenAI related stuff
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
+OPENAI_DEFAULT_GPT_MODEL = "gpt-3.5-turbo"
+OPENAI_LARGE_GPT_MODEL = "gpt-3.5-turbo-16k"
